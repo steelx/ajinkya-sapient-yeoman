@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Armata';
-  src: url("./fonts/Armata-Regular-webfont.eot");
-  src: url("./fonts/Armata-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Armata-Regular-webfont.woff") format("woff"), url("./fonts/Armata-Regular-webfont.ttf") format("truetype"), url("./fonts/Armata-Regular-webfont.svg") format("svg");
+  src: url("../fonts/Armata-Regular-webfont.eot");
+  src: url("../fonts/Armata-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Armata-Regular-webfont.woff") format("woff"), url("../fonts/Armata-Regular-webfont.ttf") format("truetype"), url("../fonts/Armata-Regular-webfont.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
