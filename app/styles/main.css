@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Armata';
+  src: url("./fonts/Armata-Regular-webfont.eot");
+  src: url("./fonts/Armata-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Armata-Regular-webfont.woff") format("woff"), url("./fonts/Armata-Regular-webfont.ttf") format("truetype"), url("./fonts/Armata-Regular-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+* {font-family: 'Armata', sans-serif !important;}
+body, html {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header {
+    background-color: #ec3002;
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+       -moz-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+}
+
+.header .nav li {
+    line-height: 48px;
+}
+.header .nav a { color: #fff; font-size: 14px;}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus { color: #000;}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus,
+.nav>li>a:hover, .nav>li>a:focus {background-color: transparent;}
+.header .navbar-brand {padding: 0;}
+.header .navbar-brand img {width: 100%;}
+.navbar-toggle {border: 1px solid #fff;}
+.navbar-toggle .icon-bar {background-color: #fff;}
+
+.navbar-header {width: 100%;}
+
+.contactus h1 {
+    font-size: 58px;
+    color: #555555;
+    border-bottom: 1px solid #555555;
+    padding: 0 15px;
+}
+.carousel .item {margin:0;}
+.carousel .item img {width: 100%;}
+.carousel-indicators-wrap {
+    background-color: #c2d337;
+    background-color: rgba(202,227,0,0.8);
+    overflow: hidden;
+    margin-top: -20px;
+}
+.carousel .carousel-indicators {
+    position: relative;left: auto; right: 0; top:0; float: right;
+    margin:0 5px;
+    width: auto;
+    overflow: hidden;
+}
+.carousel .carousel-caption {
+    position: relative;left: 0; right: 0;
+    background-color: #c2d337;
+    background-color: rgba(202,227,0,0.8);
+    text-align: left;
+    padding: 0 10px;
+    margin: 0;
+    overflow: hidden;
+}
+.carousel .carousel-caption h3{
+    line-height: 40px;
+    margin-bottom: 0;
+}
+
+.contentForm > div {padding-left: 0;}
+.contentForm .form-group {position: relative;}
+.contentForm .error {
+    color: #ec3002;
+    text-align: right;
+    font-size: 11px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    right: 0; top: 100%;
+}
+.has-error .form-control {
+    background-color: #feefeb;
+    border: 1px solid #ec3002;
+}
+
+.submitButtonWrap {clear: both;}
+
+.checkboxes {
+    background-color: #f9f5f5;
+    border: 1px solid #adadad;
+    padding: 10px;
+}
+
+.checkboxes label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+    background-image: url("../images/checkbox.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 0 -21px;
+    overflow: hidden;
+}
+.checkboxes label.checked {
+    background-position: 0 1px;
+}
+.checkboxes label input {
+    position: absolute;top: -100px;
+}
+.checkboxes label:first-child {
+    margin-left: 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 600px) {
+    body, html {padding: 0;}
+    .header .nav-pills > li {float: none;}
+    .contactus h1 {font-size: 34px;}
+    .header .navbar-brand {width: 48px; margin-left: 10px;}
+    .content p {font-size: 12px;}
+    .content p:first-child {margin-top: 20px;}
+    .content p:nth-child(2) {display: none;}
+    .contentForm > div {padding-left: 0;padding-right: 0;}
+    .nav {
+        width: 233px;
+        display: block;
+        position: absolute;z-index: 999;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background: url("../images/mobile_menu.png") no-repeat transparent 0 0;
+        border-radius: 5px;
+    }
+    .nav li {
+        display: none; /* hide all <li> items */
+        margin: 0;
+    }
+    .nav .active {
+        display: block; /* show only current <li> item */
+    }
+    .nav a {
+        display: block;
+        padding: 0 5px !important;
+        text-align: left;
+        height: 26px;
+        font-size: 12px;
+        line-height: 26px;
+        color: #333 !important;
+    }
+    .nav .active a {
+        background: none;
+        color: #ec3002 !important;
+    }
+
+    /* on nav hover */
+    .nav:hover {
+        background-image: none;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .nav:hover li {
+        display: block;
+        margin: 0 0 5px;
+    }
+}

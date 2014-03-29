@@ -1,0 +1,100 @@
+<section class="container contactus">
+    <div class="row">
+        <h1>Contact Us</h1>
+
+        <div class="col-md-3 slider">
+            <!-- Carousel -->
+            <div id="myCarousel" class="carousel slide">                
+                <div class="carousel-inner">
+                  <div ng-repeat="slide in slides" ng-class="{'active':$first}" class="item" >
+                    <img ng-src="{{slide.image}}" alt="{{slide.heading}}">
+                    <div class="carousel-caption">
+                        <h3>{{slide.heading}}</h3>
+                        <p>{{slide.text}}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-indicators-wrap">
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" ng-repeat="slide in slides" ng-class="{'active':$first}" data-slide-to="{{slide.id}}" ></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- End Carousel -->
+        </div>
+        <div class="col-md-9 content">
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+            <div class="alert alert-success fade in hide">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              Form submitted successfully.
+            </div>
+            <form name="contentForm" class="contentForm" role="form">
+              <div class="col-md-6">
+                <div ng-class="{ 'has-error' : contentForm.fullname.$invalid && !contentForm.fullname.$pristine}" class="form-group">
+                  <input type="text" class="form-control" ng-model="user.fullname" name="fullname" required="required" placeholder="Firstname Lastname">
+                  <p ng-show="contentForm.fullname.$invalid && !contentForm.fullname.$pristine" class="error">Invalid Name</p>
+                </div>
+                
+                <div ng-class="{ 'has-error' : contentForm.password1.$invalid && !contentForm.password1.$pristine}" class="form-group">
+                  <input type="password" class="form-control" ng-model="user.password1" name="password1" required="required" placeholder="Password">
+                  <p ng-show="contentForm.password1.$invalid && !contentForm.password1.$pristine" class="error">Invalid Password</p>
+                </div>
+                
+                <div ng-class="{ 'has-error' : contentForm.password2.$invalid && !contentForm.password2.$pristine}" class="form-group">
+                  <input type="password" class="form-control" ng-model="user.password2" name="password2" required="required" placeholder="Confirm Password" pw-check="password1">
+                  <p ng-show="contentForm.password2.$invalid && !contentForm.password2.$pristine" class="error">Invalid Confirm Password</p>
+                </div>
+                
+                <div ng-class="{ 'has-error' : contentForm.email.$invalid && !contentForm.email.$pristine}" class="form-group">
+                  <input type="email" class="form-control" ng-model="user.email" name="email" required="required" placeholder="Enter email">
+                  <p ng-show="contentForm.email.$invalid && !contentForm.email.$pristine" class="error">Invalid Confirm Password</p>
+                </div>
+                
+                <div ng-class="{ 'has-error' : contentForm.website.$invalid && !contentForm.website.$pristine}" class="form-group">
+                  <input type="url" class="form-control" ng-model="user.website" name="website" placeholder="Website">
+                  <p ng-show="contentForm.website.$invalid && !contentForm.website.$pristine" class="error">Invalid website url!</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Business Unit</label>
+                  
+                  <div class="checkboxes">
+                    <label for="checkbox-all">
+                      <input type="checkbox" ng-model="user.sapient" name="checkboxAll" id="checkbox-all" />
+                      Sapient
+                    </label>
+
+                    <label for="checkbox-1">
+                      <input type="checkbox" ng-model="user.sapientnitro" name="checkbox1" id="checkbox-1" />
+                      SapientNitro
+                    </label>
+                    <label for="checkbox-2">
+                      <input type="checkbox" ng-model="user.sapientglobalmarket" name="checkbox2" id="checkbox-2" />
+                      Sapient Global Market
+                    </label>
+                    <label for="checkbox-3">
+                      <input type="checkbox" ng-model="user.sapientgovtservices" name="checkbox3" id="checkbox-3" />
+                      Sapient Government Services
+                    </label>
+                    <label for="checkbox-4">
+                      <input type="checkbox" ng-model="user.mphisize" name="checkbox-4" id="checkbox4" />
+                      Sapient (m)PHISIZE
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-2 col-md-offset-4 submitButtonWrap">
+                <button type="submit" ng-click="saveForm(user, contentForm)" class="btn btn-default btn-block">Submit</button>
+              </div>     
+            </form>
+        </div>
+
+    </div>
+</section>
