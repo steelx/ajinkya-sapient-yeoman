@@ -9,7 +9,7 @@ angular.module('ajinkyaBoradeSapienttestApp')
     	if(contentForm.$valid){
     		//saved
     		$scope.formData = angular.copy(fields);
-    		console.log($scope.formData, contentForm);
+    		console.log($scope.formData);
     		$('.alert-success').removeClass('hide');
     	}
     };

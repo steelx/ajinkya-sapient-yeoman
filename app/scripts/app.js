@@ -6,7 +6,7 @@ angular.module('ajinkyaBoradeSapienttestApp', [
     'ngSanitize',
     'ngRoute'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/contactus', {
         templateUrl: 'views/contactus.html',
@@ -18,6 +18,8 @@ angular.module('ajinkyaBoradeSapienttestApp', [
       .otherwise({
         redirectTo: '/contactus'
       });
+
+      $locationProvider.html5Mode(true);
   });
 
 //nav
